@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(102, 6%, 69%);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: hsl(100, 6%, 81%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .85);
+    width: 445px;
+    height: 445px;
+    position: relative;
+}
+
+.btn-container {
+    background-color: hsl(102, 6%, 69%);
+    border: 2px solid hsl(96, 3%, 34%);
+    border-radius: inherit;
+    width: 395px;
+    height: 395px;
+    position: absolute;
+    inset: 25px;
+}
+
+.circle-container {
+    background-color: hsl(48, 100%, 96%);
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .85);
+    width: 352px;
+    height: 352px;
+    position: absolute;
+    inset: 21px;
+}
+
+.btn {
+    background-color: hsl(45, 89%, 54%);
+    color: #000;
+    border: none;
+    border-radius: 100%;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;    
+    position: absolute;
+    width: 328px;
+    height: 328px;
+    inset: 12px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;   
+}
+
+.btn::after {
+    content: '';
+    box-shadow: 0 0 10px rgba(0, 0, 0, .85);
+    opacity: 1;
+    border-radius: inherit;
+    position: absolute;    
+    width: 328px;
+    height: 328px;
+    inset: 0px;
+}
+
+.btn::before {
+    content: '';
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, .85);
+    opacity: 0;
+    border-radius: inherit;
+    position: absolute;    
+    width: 328px;
+    height: 328px;
+    inset: 0px;
+}
+
+.jim {
+    position: absolute;
+}
+
+.btn:hover::before,
+.btn:focus::before {
+    opacity: 1;
+}
+
+.btn:hover::after,
+.btn:focus::after {
+    opacity: 0;
+}
+
+/* 
+hsl(102, 6%, 69%)
+hsl(100, 6%, 81%)
+hsl(96, 3%, 34%)
+hsl(45, 89%, 54%)
+hsl(48, 100%, 96%)
+*/
